@@ -1,0 +1,8 @@
+Package: lv_example
+Version: 0.0.1-1
+Depends: libc
+Source: package/lv_example
+Section: onion
+Architecture: ramips_24kec
+Installed-Size: 142320
+Description:  A template for Omega2 Dash programs using the LittleV Graphics Library
