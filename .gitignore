@@ -1,0 +1,3 @@
+bin/
+*.o
+ipkg-ramips_24kec/

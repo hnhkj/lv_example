@@ -3,7 +3,7 @@
 
 #include "lv_drivers/display/fbdev.h"
 #include "lv_drivers/display/monitor.h"
-#include "lv_drivers/indev/XPT7603.h"
+#include "lv_drivers/indev/evdev.h"
 #include "lvgl/lvgl.h"
 
 #define DISP_BUF_SIZE (80*LV_HOR_RES_MAX)
@@ -47,7 +47,7 @@ int main(int argc, char *argv[]) {
   lv_indev_drv_t indev_drv;
   lv_indev_drv_init(&indev_drv);             /*Descriptor of a input device driver*/
   indev_drv.type = LV_INDEV_TYPE_POINTER;    /*Touch pad is a pointer-like device*/
-  indev_drv.read_cb = xpt7603_read;      /*Set your driver function*/
+  indev_drv.read_cb = evdev_read;      /*Set your driver function*/
   lv_indev_drv_register(&indev_drv);         /*Finally register the driver*/
   
   /* Demo Code - replace this with yours */
